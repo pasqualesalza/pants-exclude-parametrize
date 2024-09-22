@@ -1,0 +1,17 @@
+[GLOBAL]
+pants_version = "2.22.0"
+backend_packages = [
+    "pants.backend.python",
+    "pants.backend.build_files.fmt.black",
+]
+
+[source]
+marker_filenames = ["pyproject.toml"]
+
+[python]
+interpreter_constraints = [">=3.10, <3.11"]
+enable_resolves = true
+
+[python.resolves]
+python-default = "requirements/python-default.lock"
+python-custom = "requirements/python-custom.lock"
