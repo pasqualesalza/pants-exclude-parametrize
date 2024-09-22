@@ -3,6 +3,7 @@
 /dist
 /.pids
 /.pants.workdir.file_lock*
+.env
 
 # Python files
 __pycache__/
