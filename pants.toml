@@ -2,9 +2,13 @@
 pants_version = "2.22.0"
 backend_packages = [
     "pants.backend.python",
-    "pants.backend.build_files.fmt.black",
+    "pants.backend.build_files.fmt.ruff",
+    "pants.backend.experimental.python.lint.ruff.format",
+    "pants.backend.experimental.python.lint.ruff.check",
     "pants.backend.plugin_development",
+    "multiresolve",
 ]
+pythonpath = ["%(buildroot)s/pants-plugins"]
 
 [source]
 root_patterns.add = [
