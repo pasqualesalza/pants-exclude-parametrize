@@ -6,6 +6,11 @@ backend_packages = [
     "pants.backend.plugin_development",
 ]
 
+[source]
+root_patterns.add = [
+    "pants-plugins",
+]
+
 [python]
 interpreter_constraints = [">=3.10, <3.11"]
 enable_resolves = true
