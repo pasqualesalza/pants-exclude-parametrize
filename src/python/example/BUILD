@@ -26,5 +26,9 @@ pex_binary(
 pex_binary(
     name="pex_binary-exclude-explicit",
     entry_point="main.py",
-    dependencies=["./req.py", "!!requirements#requests@resolve=python-default"],
+    dependencies=[
+        "./req.py",
+        "!!requirements#requests@resolve=python-default",
+        "!!requirements#requests@resolve=python-custom",
+    ],
 )
