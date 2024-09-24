@@ -32,3 +32,16 @@ pex_binary(
         "!!requirements#requests@resolve=python-custom",
     ],
 )
+
+resource(name="pyproject", source="pyproject.toml")
+
+python_distribution(
+    name="python_distribution",
+    dependencies=[":pyproject"],
+    provides=python_artifact(
+        name="example",
+        version="0.0.1",
+    ),
+    generate_setup=False,
+    resolve=parametrize("python-default", "python-custom"),
+)
