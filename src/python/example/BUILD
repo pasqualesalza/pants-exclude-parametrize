@@ -3,7 +3,6 @@ __defaults__(
         (
             python_sources,
             pex_binary,
-            mr_pex_binary,
         ): dict(
             resolve=parametrize("python-default", "python-custom"),
         ),
@@ -12,7 +11,7 @@ __defaults__(
 
 python_sources()
 
-mr_pex_binary(
+pex_binary(
     name="pex_binary",
     entry_point="main.py",
     dependencies=["./req.py"],
