@@ -35,7 +35,7 @@ resource(name="pyproject", source="pyproject.toml")
 
 python_distribution(
     name="python_distribution",
-    dependencies=[":pyproject"],
+    dependencies=["./example", ":pyproject"],
     provides=python_artifact(),
     generate_setup=False,
     resolve=parametrize("python-default", "python-custom"),
