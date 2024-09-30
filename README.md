@@ -32,10 +32,10 @@ requirements#requests@resolve=python-default
 requirements/python-custom.lock:_python-custom_lockfile
 requirements/python-default.lock:_python-default_lockfile
 requirements/requirements.txt
-src/python/example/main.py@resolve=python-custom
-src/python/example/main.py@resolve=python-default
-src/python/example/req.py@resolve=python-custom
-src/python/example/req.py@resolve=python-default
+src/python/example/example/main.py@resolve=python-custom
+src/python/example/example/main.py@resolve=python-default
+src/python/example/example/req.py@resolve=python-custom
+src/python/example/example/req.py@resolve=python-default
 ```
 
 ### 2. `pex_binary-exclude`
@@ -94,10 +94,10 @@ requirements#requests-mock@resolve=python-default
 requirements/python-custom.lock:_python-custom_lockfile
 requirements/python-default.lock:_python-default_lockfile
 requirements/requirements.txt
-src/python/example/main.py@resolve=python-custom
-src/python/example/main.py@resolve=python-default
-src/python/example/req.py@resolve=python-custom
-src/python/example/req.py@resolve=python-default
+src/python/example/example/main.py@resolve=python-custom
+src/python/example/example/main.py@resolve=python-default
+src/python/example/example/req.py@resolve=python-custom
+src/python/example/example/req.py@resolve=python-default
 ```
 
 ## Conclusion
