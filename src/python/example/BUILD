@@ -3,6 +3,9 @@ __defaults__(
         (
             python_sources,
             pex_binary,
+            python_distribution,
+            resource,
+            resources,
         ): dict(
             resolve=parametrize("python-default", "python-custom"),
         ),
@@ -36,7 +39,6 @@ resource(name="pyproject", source="pyproject.toml")
 python_distribution(
     name="python_distribution",
     dependencies=["./example", ":pyproject"],
-    provides=python_artifact(),
-    generate_setup=False,
-    resolve=parametrize("python-default", "python-custom"),
+    provides=python_artifact(name="example", version="0.0.1"),
+    generate_setup=True,
 )
